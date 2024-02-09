@@ -1,64 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo"
-    >
+    android:background="@drawable/fondo">
 
     <TextView
-        android:id="@+id/emailperfil"
+        android:layout_width="239dp"
+        android:layout_height="80dp"
+        android:text="REGISTRO"
+        android:textColor="#FF5722"
+        android:textSize="50dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/emailregistro"
         android:layout_width="200dp"
         android:layout_height="78dp"
         android:background="@drawable/barra_paraescribir"
         android:text=" EMAIL"
+        android:textColor="@color/white"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="33dp"
         tools:layout_editor_absoluteY="210dp" />
 
-    <TextView
+    <EditText
         android:background="@drawable/barra_paraescribir"
-        android:id="@+id/usernameperfil"
+        android:id="@+id/usernameregistro"
         android:layout_width="205dp"
         android:layout_height="76dp"
         android:text="USERNAME"
+        android:textColor="@color/white"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="34dp"
         tools:layout_editor_absoluteY="296dp" />
 
-    <TextView
-        android:id="@+id/passwordperfil"
+    <EditText
+        android:id="@+id/passwordregistro"
         android:layout_width="203dp"
         android:layout_height="59dp"
         android:background="@drawable/barra_paraescribir"
         android:text="PASSWORD"
+        android:textColor="@color/white"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="33dp"
         tools:layout_editor_absoluteY="377dp" />
 
-
     <Button
-        android:id="@+id/button"
-        android:layout_width="108dp"
-        android:layout_height="70dp"
-        android:backgroundTint="#FF5722"
-        android:text="ATRÁS"
-        android:textSize="18dp"
+        android:id="@+id/botonregistro"
+        android:layout_width="204dp"
+        android:layout_height="88dp"
+        android:backgroundTint="#F15F31"
+        android:text="CONFIRMAR"
         android:textColor="@color/black"
+        android:textSize="27dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="275dp"
-        tools:layout_editor_absoluteY="604dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="122dp"
-        android:layout_height="105dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@mipmap/defaulpfp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="261dp"
-        tools:layout_editor_absoluteY="27dp" />
-
+        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteY="628dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

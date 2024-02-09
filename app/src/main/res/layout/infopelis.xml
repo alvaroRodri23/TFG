@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <TextView
+        android:layout_width="404dp"
+        android:layout_height="100dp"
+        android:text="INFO SERIE / FILM "
+        android:textColor="#FF5722"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.073" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="246dp"
+        android:layout_height="191dp"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="159dp"
+        tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:layout_width="255dp"
+        android:layout_height="113dp"
+        android:text="SINOPSIS "
+        android:textColor="#FF5722"
+        android:textSize="40dp"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="424dp"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="108dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#FF5722"
+        android:text="ATRÁS"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="275dp"
+        tools:layout_editor_absoluteY="604dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
