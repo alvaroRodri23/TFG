@@ -46,21 +46,69 @@
         tools:layout_editor_absoluteX="212dp"
         tools:layout_editor_absoluteY="281dp" />
 
-    <HorizontalScrollView
-        android:layout_width="409dp"
-        android:layout_height="254dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="431dp"
+    <ScrollView
+        android:layout_width="414dp"
+        android:layout_height="330dp"
+        android:fillViewport="true"
         tools:ignore="MissingConstraints"
-        android:fillViewport="true">
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="400dp">
+
         <LinearLayout
             android:id="@+id/gallery"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jujutsu Kaisen Season 2"></TextView>
+
+            <ImageView
+                android:id="@+id/imageViewscroll1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/jjks2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dr.Stone New World"></TextView>
+
+            <ImageView
+                android:id="@+id/imageViewscroll2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/drstone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:text="Jujutsu Kaisen Season 2"></TextView>
+
+            <ImageView
+                android:id="@+id/imageViewscroll3"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/jjks2" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jujutsu Kaisen Season 2"></TextView>
+
+            <ImageView
+                android:id="@+id/imageViewscroll4"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/jjks2" />
         </LinearLayout>
 
-
-
-    </HorizontalScrollView>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
