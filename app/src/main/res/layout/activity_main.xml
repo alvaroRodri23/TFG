@@ -23,14 +23,15 @@
 
     <EditText
         android:id="@+id/emaillogin"
-        android:layout_width="200dp"
-        android:layout_height="78dp"
+        android:layout_width="194dp"
+        android:layout_height="62dp"
         android:background="@drawable/barra_paraescribir"
-        android:text=" EMAIL"
+        android:text="EMAIL"
         android:textColor="@color/white"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="33dp"
         tools:layout_editor_absoluteY="210dp" />
+
 
     <EditText
         android:id="@+id/passwordperfil"
@@ -41,8 +42,7 @@
         android:textColor="@color/white"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="377dp" />
-
+        tools:layout_editor_absoluteY="345dp" />
 
     <Button
         android:id="@+id/botonregistro"
