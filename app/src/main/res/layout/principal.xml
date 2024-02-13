@@ -31,7 +31,8 @@
         android:layout_width="200dp"
         android:layout_height="121dp"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/series"
+        android:background="@drawable/fondo"
+        app:srcCompat="@drawable/animelogo"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="12dp"
         tools:layout_editor_absoluteY="281dp" />
@@ -41,15 +42,18 @@
         android:layout_width="196dp"
         android:layout_height="120dp"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/peliculas"
+        app:srcCompat="@drawable/animemovies"
+        android:background="@drawable/fondo"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="212dp"
         tools:layout_editor_absoluteY="281dp" />
 
     <ScrollView
+        android:id="@+id/scrollviewseries"
         android:layout_width="414dp"
         android:layout_height="330dp"
         android:fillViewport="true"
+        android:visibility="gone"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-3dp"
         tools:layout_editor_absoluteY="400dp">
@@ -63,7 +67,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jujutsu Kaisen Season 2"></TextView>
+                android:text="Jujutsu Kaisen Season 2"
+                android:textAlignment="center"
+                android:textColor="@color/white"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll1"
@@ -75,7 +81,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dr.Stone New World"></TextView>
+                android:text="Dr.Stone New World"
+                android:textAlignment="center"
+                android:textColor="@color/white"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll2"
@@ -87,27 +95,135 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="31dp"
-                android:text="Jujutsu Kaisen Season 2"></TextView>
+                android:text="Ataque a los titanes"
+                android:textAlignment="center"
+                android:textColor="@color/white"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll3"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/jjks2" />
+                app:srcCompat="@drawable/shingeki" />
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jujutsu Kaisen Season 2"></TextView>
+                android:text="Dragon Ball Super"
+                android:textAlignment="center"
+                android:textColor="@color/white"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll4"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/jjks2" />
+                app:srcCompat="@drawable/db" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Black Clover"
+                android:textAlignment="center"
+                android:textColor="@color/white"></TextView>
+
+            <ImageView
+                android:id="@+id/imageViewscroll5"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/bc" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollviewpeliculas"
+        android:layout_width="414dp"
+        android:layout_height="330dp"
+        android:fillViewport="true"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="400dp">
+
+        <LinearLayout
+            android:id="@+id/gallery2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Black Clover Sword of the Wizard King"
+                android:textAlignment="center"
+                android:textColor="@color/white"></TextView>
+
+            <ImageView
+                android:id="@+id/imageViewscroll6"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/bcfilm" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jujutsu Kaisen 0"
+                android:textAlignment="center"
+                android:textColor="@color/white"></TextView>
+
+            <ImageView
+                android:id="@+id/imageViewscroll7"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/jjk0" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:text="Dragon Ball Super Broly"
+                android:textAlignment="center"
+                android:textColor="@color/white"></TextView>
+
+            <ImageView
+                android:id="@+id/imageViewscroll8"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/dbsbroly" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Suzume"
+                android:textAlignment="center"
+                android:textColor="@color/white"></TextView>
+
+            <ImageView
+                android:id="@+id/imageViewscroll9"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/suzume" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardianes de la noche"
+                android:textAlignment="center"
+                android:textColor="@color/white"></TextView>
+
+            <ImageView
+                android:id="@+id/imageViewscroll10"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/tren" />
         </LinearLayout>
 
     </ScrollView>
