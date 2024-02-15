@@ -8,55 +8,73 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="234dp"
+        android:layout_width="wrap_content"
         android:layout_height="97dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/crunchyroll"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/botonperfil"
         android:layout_width="124dp"
         android:layout_height="112dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/defaulpfp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="271dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/botonseries"
-        android:layout_width="200dp"
-        android:layout_height="121dp"
-        android:scaleType="fitXY"
+        android:layout_width="195dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="156dp"
         android:background="@drawable/fondo"
-        app:srcCompat="@drawable/animelogo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="281dp" />
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/botonpelis"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.026"
+        app:srcCompat="@drawable/animes"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/botonpelis"
-        android:layout_width="196dp"
-        android:layout_height="120dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/animemovies"
+        android:layout_width="211dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="156dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/fondo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="212dp"
-        tools:layout_editor_absoluteY="281dp" />
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.042"
+        app:srcCompat="@drawable/pelis"
+        tools:ignore="MissingConstraints" />
 
     <ScrollView
         android:id="@+id/scrollviewseries"
-        android:layout_width="414dp"
-        android:layout_height="330dp"
+        android:layout_width="500dp"
+        android:layout_height="400dp"
         android:fillViewport="true"
         android:visibility="gone"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="400dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonseries"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:id="@+id/gallery"
@@ -67,6 +85,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="23dp"
                 android:text="Jujutsu Kaisen Season 2"
                 android:textAlignment="center"
                 android:textColor="@color/white"></TextView>
@@ -74,7 +93,7 @@
             <ImageView
                 android:id="@+id/imageViewscroll1"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="230dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/jjks2" />
 
@@ -83,12 +102,13 @@
                 android:layout_height="wrap_content"
                 android:text="Dr.Stone New World"
                 android:textAlignment="center"
+                android:textSize="23dp"
                 android:textColor="@color/white"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll2"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="230dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/drstone" />
 
@@ -96,13 +116,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="31dp"
                 android:text="Ataque a los titanes"
+                android:textSize="23dp"
                 android:textAlignment="center"
                 android:textColor="@color/white"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll3"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="230dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/shingeki" />
 
@@ -111,13 +132,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Dragon Ball Super"
+                android:textSize="23dp"
                 android:textAlignment="center"
                 android:textColor="@color/white"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll4"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="230dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/db" />
 
@@ -125,13 +147,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Black Clover"
+                android:textSize="23dp"
                 android:textAlignment="center"
                 android:textColor="@color/white"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll5"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="230dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/bc" />
         </LinearLayout>
@@ -140,13 +163,15 @@
 
     <ScrollView
         android:id="@+id/scrollviewpeliculas"
-        android:layout_width="414dp"
-        android:layout_height="330dp"
+        android:layout_width="500dp"
+        android:layout_height="400dp"
         android:fillViewport="true"
         android:visibility="gone"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="400dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonseries"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:id="@+id/gallery2"
@@ -157,6 +182,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="23dp"
                 android:text="Black Clover Sword of the Wizard King"
                 android:textAlignment="center"
                 android:textColor="@color/white"></TextView>
@@ -164,7 +190,7 @@
             <ImageView
                 android:id="@+id/imageViewscroll6"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="230dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/bcfilm" />
 
@@ -172,13 +198,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Jujutsu Kaisen 0"
+                android:textSize="23dp"
                 android:textAlignment="center"
                 android:textColor="@color/white"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll7"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="230dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/jjk0" />
 
@@ -186,13 +213,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="31dp"
                 android:text="Dragon Ball Super Broly"
+                android:textSize="23dp"
                 android:textAlignment="center"
                 android:textColor="@color/white"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll8"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="230dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/dbsbroly" />
 
@@ -201,13 +229,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Suzume"
+                android:textSize="23dp"
                 android:textAlignment="center"
                 android:textColor="@color/white"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll9"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="230dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/suzume" />
 
@@ -215,13 +244,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Guardianes de la noche"
+                android:textSize="23dp"
                 android:textAlignment="center"
                 android:textColor="@color/white"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll10"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="230dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/tren" />
         </LinearLayout>
