@@ -55,6 +55,14 @@ class Principal : AppCompatActivity() {
             startActivity(intent)
         }
 
+        findViewById<ImageView>(R.id.imageViewscroll3).setOnClickListener {
+            val intent = Intent(this, infopelis::class.java)
+            intent.putExtra("titulo", "Ataque a los titanes")
+            intent.putExtra("imagen", R.drawable.shingeki)
+            intent.putExtra("sinopsis", "Sinopsis de shingeki")
+            startActivity(intent)
+        }
+
         // Agrega configuraciones para el resto de las imágenes aquí
     }
 }

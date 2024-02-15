@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo">
 
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="404dp"
         android:layout_height="100dp"
         android:text="INFO SERIE / FILM "
@@ -14,42 +16,62 @@
         android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073" />
-
+        app:layout_constraintVertical_bias="0.064" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/fotoinfo"
         android:layout_width="246dp"
         android:layout_height="191dp"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="159dp"
-        tools:srcCompat="@tools:sample/avatars"
-        tools:ignore="MissingConstraints" />
-
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
+        android:id="@+id/Tituloinfo"
         android:layout_width="255dp"
         android:layout_height="113dp"
+        android:text="Titulo"
+        android:textColor="#FF5722"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/Sinopsis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fotoinfo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Sinopsis"
+        android:layout_width="255dp"
+        android:layout_height="113dp"
+        android:layout_marginBottom="104dp"
         android:text="SINOPSIS "
         android:textColor="#FF5722"
         android:textSize="40dp"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="424dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="108dp"
         android:layout_height="70dp"
         android:backgroundTint="#FF5722"
         android:text="ATRÁS"
-        android:textSize="18dp"
         android:textColor="@color/black"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="275dp"
-        tools:layout_editor_absoluteY="604dp" />
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sinopsis"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

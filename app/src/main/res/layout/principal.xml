@@ -83,12 +83,13 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/titulo1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="23dp"
                 android:text="Jujutsu Kaisen Season 2"
                 android:textAlignment="center"
-                android:textColor="@color/white"></TextView>
+                android:textColor="@color/white"
+                android:textSize="23dp"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll1"
@@ -98,12 +99,13 @@
                 app:srcCompat="@drawable/jjks2" />
 
             <TextView
+                android:id="@+id/titulo2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Dr.Stone New World"
                 android:textAlignment="center"
-                android:textSize="23dp"
-                android:textColor="@color/white"></TextView>
+                android:textColor="@color/white"
+                android:textSize="23dp"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll2"
@@ -113,12 +115,13 @@
                 app:srcCompat="@drawable/drstone" />
 
             <TextView
+                android:id="@+id/titulo3"
                 android:layout_width="match_parent"
                 android:layout_height="31dp"
                 android:text="Ataque a los titanes"
-                android:textSize="23dp"
                 android:textAlignment="center"
-                android:textColor="@color/white"></TextView>
+                android:textColor="@color/white"
+                android:textSize="23dp"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll3"
@@ -129,12 +132,13 @@
 
 
             <TextView
+                android:id="@+id/titulo4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Dragon Ball Super"
-                android:textSize="23dp"
                 android:textAlignment="center"
-                android:textColor="@color/white"></TextView>
+                android:textColor="@color/white"
+                android:textSize="23dp"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll4"
@@ -144,12 +148,13 @@
                 app:srcCompat="@drawable/db" />
 
             <TextView
+                android:id="@+id/titulo5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Black Clover"
-                android:textSize="23dp"
                 android:textAlignment="center"
-                android:textColor="@color/white"></TextView>
+                android:textColor="@color/white"
+                android:textSize="23dp"></TextView>
 
             <ImageView
                 android:id="@+id/imageViewscroll5"

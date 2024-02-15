@@ -6,7 +6,12 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
     >
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProfileOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"/>
     <TextView
         android:id="@+id/emailperfil"
         android:layout_width="200dp"
@@ -50,7 +55,7 @@
         tools:layout_editor_absoluteX="275dp"
         tools:layout_editor_absoluteY="604dp" />
 
-    <ImageButton
+   <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="122dp"
         android:layout_height="105dp"
