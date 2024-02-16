@@ -126,7 +126,7 @@ class Principal : AppCompatActivity() {
             intent.putExtra("sinopsis", "Tanjiro Kamado y sus amigos del Demon Slayer Corps acompañan a Kyōjurō Rengoku, el Flame Hashira, para investigar una misteriosa serie de desapariciones que ocurren dentro de un tren aparentemente infinitamente largo. Poco saben que Enmu, la última de las Lunas Inferiores de los Doce Kizuki, también está a bordo y les ha preparado una trampa.")
             startActivity(intent)
         }
-        // Agrega configuraciones para el resto de las imágenes aquí
+
     }
 }
 
