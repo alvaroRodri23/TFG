@@ -11,23 +11,24 @@
         android:id="@+id/textView"
         android:layout_width="404dp"
         android:layout_height="100dp"
-        android:text="INFO SERIE / FILM "
-        android:textColor="#FF5722"
+        android:text="INFORMACIÓN"
+        android:textColor="@color/white"
         android:textSize="40dp"
+        android:background="@drawable/fondo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.064" />
+        app:layout_constraintVertical_bias="0.039" />
 
     <ImageView
         android:id="@+id/fotoinfo"
-        android:layout_width="246dp"
-        android:layout_height="191dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="390dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.226"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="MissingConstraints"
@@ -35,32 +36,36 @@
 
     <TextView
         android:id="@+id/Tituloinfo"
-        android:layout_width="255dp"
-        android:layout_height="113dp"
+        android:layout_width="382dp"
+        android:layout_height="81dp"
         android:text="Titulo"
-        android:textColor="#FF5722"
-        android:textSize="40dp"
+        android:textColor="@color/white"
+        android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/Sinopsis"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.376"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fotoinfo"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/Sinopsis"
-        android:layout_width="255dp"
-        android:layout_height="113dp"
-        android:layout_marginBottom="104dp"
+        android:layout_width="400dp"
+        android:layout_height="338dp"
+        android:layout_marginBottom="116dp"
+        android:background="@color/design_default_color_on_secondary"
         android:text="SINOPSIS "
-        android:textColor="#FF5722"
-        android:textSize="40dp"
+        android:textColor="@color/white"
+        android:textSize="21dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/botonatrasinfo"
         android:layout_width="108dp"
         android:layout_height="70dp"
         android:backgroundTint="#FF5722"
@@ -69,9 +74,23 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.973"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Sinopsis"
+        app:layout_constraintVertical_bias="0.652"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="218dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.978"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/crunchyroll" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

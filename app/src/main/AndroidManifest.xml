@@ -29,6 +29,10 @@
             android:name=".infopelis"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".perfilactivity"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>

@@ -17,6 +17,21 @@
         app:srcCompat="@drawable/crunchyroll"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/botonpruebas"
+        android:layout_width="108dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FF5722"
+        android:text="ATRÁS"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <ImageButton
         android:id="@+id/botonperfil"
         android:layout_width="124dp"

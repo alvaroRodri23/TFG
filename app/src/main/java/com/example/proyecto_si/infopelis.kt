@@ -1,7 +1,9 @@
 package com.example.proyecto_si
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +14,13 @@ class infopelis : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.infopelis)
+
+        findViewById<Button>(R.id.botonatrasinfo).setOnClickListener {
+            val intent = Intent(this, Principal::class.java)
+            startActivity(intent)
+        }
+
+
 
         // Obtener datos del Intent
         val titulo = intent.getStringExtra("titulo")

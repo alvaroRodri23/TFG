@@ -13,12 +13,6 @@
         android:padding="8dp"
         android:src="@drawable/bc"
         android:scaleType="centerCrop" />
-    <ImageView
-        android:id="@+id/imageViewOption2"
-        android:layout_width="260dp"
-        android:layout_height="162dp"
-        android:padding="8dp"
-        android:src="@drawable/animelogo"
-        android:scaleType="centerCrop" />
+
 
     </LinearLayout>
