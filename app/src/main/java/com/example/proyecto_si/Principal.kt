@@ -1,5 +1,7 @@
 package com.example.proyecto_si
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -15,11 +17,26 @@ class Principal : AppCompatActivity() {
     private lateinit var moviesButton: ImageButton
     private lateinit var seriesScrollView: ScrollView
     private lateinit var moviesScrollView: ScrollView
+    private lateinit var botonPerfil: ImageView
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.principal)
+        val botonPerfil = findViewById<ImageButton>(R.id.botonperfil)
+
+        botonPerfil.setOnClickListener {
+            val intent = Intent(this, perfilactivity::class.java)
+            startActivityForResult(intent, 1)
+        }
+
+
+        val sharedPreferences = getSharedPreferences("Perfil", Context.MODE_PRIVATE)
+        val photoId = sharedPreferences.getInt("photoId", -1)
+        if (photoId != -1) {
+            // Establecer la foto de perfil en el botón
+            botonPerfil.setImageResource(photoId)
+        }
 
         findViewById<Button>(R.id.botonpruebas).setOnClickListener {
             val intent = Intent(this, perfilactivity::class.java)
@@ -127,7 +144,26 @@ class Principal : AppCompatActivity() {
             startActivity(intent)
         }
 
+
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 1 && resultCode == Activity.RESULT_OK) {
+            // Recibe el ID de la foto seleccionada
+            val photoId = data?.getIntExtra("photoId", -1)
+
+            // Establece la foto de perfil en el botón
+            if (photoId != null && photoId != -1) {
+
+                botonPerfil.setImageResource(photoId)
+            }
+        }
+    }
+
+
+
 }
 
 

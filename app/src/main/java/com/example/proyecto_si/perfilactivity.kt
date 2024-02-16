@@ -2,6 +2,7 @@ package com.example.proyecto_si
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -30,11 +31,32 @@ class perfilactivity : AppCompatActivity() {
         imageViewPerfil = findViewById(R.id.imageButton3)
         recyclerViewProfileOptions = findViewById(R.id.recyclerViewProfileOptions)
 
-
         recyclerViewProfileOptions.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        recyclerViewProfileOptions.adapter = ProfileOptionsAdapter(photos) { photo ->
-            // Cuando el usuario elige una foto,se establece como foto de perfil
+
+        // Inicializar y establecer el adaptador
+        val adapter = ProfileOptionsAdapter(photos) { photo ->
+            // Cuando el usuario elige una foto, se establece como foto de perfil
             imageViewPerfil.setImageResource(photo)
+
+            // Guardar la foto de perfil utilizando SharedPreferences
+            val sharedPreferences = getSharedPreferences("Perfil", Context.MODE_PRIVATE)
+            sharedPreferences.edit().putInt("photoId", photo).apply()
+
+            // Indicar que se seleccionó una foto de perfil
+            setResult(Activity.RESULT_OK)
         }
+        recyclerViewProfileOptions.adapter = adapter
+
+
+        val sharedPreferences = getSharedPreferences("Perfil", Context.MODE_PRIVATE)
+        val savedPhotoId = sharedPreferences.getInt("photoId", -1)
+
+        if (savedPhotoId != -1) {
+            // Si hay una imagen de perfil guardada, establecerla en el ImageView
+            imageViewPerfil.setImageResource(savedPhotoId)
+        }
+
     }
+
+
 }
