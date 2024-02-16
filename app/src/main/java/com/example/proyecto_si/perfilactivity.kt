@@ -13,7 +13,7 @@ class perfilactivity : AppCompatActivity() {
 
     private lateinit var imageViewPerfil: ImageView
     private lateinit var recyclerViewProfileOptions: RecyclerView
-    private val photos = listOf(R.drawable.drstone, R.drawable.bc, R.drawable.jjks2) // Lista de fotos de perfil
+    private val photos = listOf(R.drawable.senkupfp, R.drawable.astapfp, R.drawable.itadoripfp,R.drawable.gokupfp, R.drawable.yutapfp,R.drawable.suzumepfp, R.drawable.vegetapfp,R.drawable.makipfp, R.drawable.erenpfp,R.drawable.tokitopfp)
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,10 +23,10 @@ class perfilactivity : AppCompatActivity() {
         imageViewPerfil = findViewById(R.id.imageButton3)
         recyclerViewProfileOptions = findViewById(R.id.recyclerViewProfileOptions)
 
-        // Configurar RecyclerView para mostrar las opciones de fotos de perfil
+
         recyclerViewProfileOptions.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerViewProfileOptions.adapter = ProfileOptionsAdapter(photos) { photo ->
-            // Cuando el usuario elige una foto, la establecemos como foto de perfil
+            // Cuando el usuario elige una foto,se establece como foto de perfil
             imageViewPerfil.setImageResource(photo)
         }
     }

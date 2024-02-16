@@ -6,42 +6,62 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
     >
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewProfileOptions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent"/>
-    <TextView
-        android:id="@+id/emailperfil"
-        android:layout_width="200dp"
-        android:layout_height="78dp"
-        android:background="@drawable/barra_paraescribir"
-        android:text=" EMAIL"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="210dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264" />
+
 
     <TextView
+        android:id="@+id/emailperfil"
+        android:layout_width="262dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="560dp"
         android:background="@drawable/barra_paraescribir"
+        android:text=" EMAIL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
         android:id="@+id/usernameperfil"
-        android:layout_width="205dp"
-        android:layout_height="76dp"
+        android:layout_width="262dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/barra_paraescribir"
         android:text="USERNAME"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="296dp" />
+        app:layout_constraintBottom_toTopOf="@+id/emailperfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewProfileOptions"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/passwordperfil"
-        android:layout_width="203dp"
-        android:layout_height="59dp"
+        android:layout_width="262dp"
+        android:layout_height="114dp"
         android:background="@drawable/barra_paraescribir"
         android:text="PASSWORD"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="377dp" />
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/emailperfil"
+        app:layout_constraintVertical_bias="0.298"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button"
@@ -49,21 +69,44 @@
         android:layout_height="70dp"
         android:backgroundTint="#FF5722"
         android:text="ATRÁS"
-        android:textSize="18dp"
         android:textColor="@color/black"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="275dp"
-        tools:layout_editor_absoluteY="604dp" />
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.927"
+        tools:ignore="MissingConstraints" />
 
-   <ImageButton
+    <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="122dp"
-        android:layout_height="105dp"
+        android:layout_width="155dp"
+        android:layout_height="146dp"
+        android:background="@drawable/round_button"
+        android:backgroundTint="@color/black"
         android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewProfileOptions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.989"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571"
         app:srcCompat="@mipmap/defaulpfp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="261dp"
-        tools:layout_editor_absoluteY="27dp" />
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/rextoperfil"
+        android:layout_width="300dp"
+        android:layout_height="181dp"
+        android:layout_marginTop="44dp"
+        android:text="Elige un Avatar"
+        android:textColor="@color/white"
+        android:textSize="75dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
