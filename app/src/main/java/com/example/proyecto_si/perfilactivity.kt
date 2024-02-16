@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,6 +20,12 @@ class perfilactivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.perfil)
+
+        findViewById<Button>(R.id.botonprueba2).setOnClickListener {
+            val intent = Intent(this, Principal::class.java)
+            startActivity(intent)
+        }
+
 
         imageViewPerfil = findViewById(R.id.imageButton3)
         recyclerViewProfileOptions = findViewById(R.id.recyclerViewProfileOptions)

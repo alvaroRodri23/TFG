@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="97dp"
+        android:layout_width="211dp"
+        android:layout_height="147dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,18 +49,17 @@
 
     <ImageButton
         android:id="@+id/botonseries"
-        android:layout_width="195dp"
-        android:layout_height="152dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="211dp"
+        android:layout_height="147dp"
         android:layout_marginTop="156dp"
         android:background="@drawable/fondo"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/botonpelis"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.026"
+        app:layout_constraintVertical_bias="0.008"
         app:srcCompat="@drawable/animes"
         tools:ignore="MissingConstraints" />
 
@@ -69,13 +68,14 @@
         android:layout_width="211dp"
         android:layout_height="147dp"
         android:layout_marginTop="156dp"
-        android:layout_marginEnd="16dp"
         android:background="@drawable/fondo"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.042"
+        app:layout_constraintVertical_bias="0.007"
         app:srcCompat="@drawable/pelis"
         tools:ignore="MissingConstraints" />
 
