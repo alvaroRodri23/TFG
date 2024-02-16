@@ -92,5 +92,20 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/crunchyroll" />
 
+    <Button
+        android:id="@+id/Trailer"
+        android:layout_width="129dp"
+        android:layout_height="68dp"
+        android:backgroundTint="#FF0808"
+        android:text="TRAILER"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.405" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
