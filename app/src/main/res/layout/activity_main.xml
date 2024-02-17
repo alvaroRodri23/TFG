@@ -16,33 +16,42 @@
         android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.073" />
 
     <EditText
-        android:id="@+id/emaillogin"
-        android:layout_width="194dp"
-        android:layout_height="62dp"
+        android:id="@+id/passwordperfil"
+        android:layout_width="243dp"
+        android:layout_height="96dp"
         android:background="@drawable/barra_paraescribir"
-        android:text="EMAIL"
+        android:hint="PASSWORD"
         android:textColor="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="210dp" />
-
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emaillogin"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/passwordperfil"
-        android:layout_width="203dp"
-        android:layout_height="59dp"
+        android:id="@+id/emaillogin"
+        android:layout_width="243dp"
+        android:layout_height="96dp"
         android:background="@drawable/barra_paraescribir"
-        android:text="PASSWORD"
+        android:hint="EMAIL"
         android:textColor="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="345dp" />
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.612"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/botonregistro"
@@ -52,30 +61,54 @@
         android:text="REGISTRO"
         android:textColor="@color/black"
         android:textSize="27dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="216dp"
-        tools:layout_editor_absoluteY="628dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/botonlogin"
-        android:layout_width="178dp"
-        android:layout_height="57dp"
+        android:layout_width="193dp"
+        android:layout_height="54dp"
         android:backgroundTint="#F15F31"
         android:text="CONTINUAR"
         android:textColor="@color/black"
         android:textSize="23dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="465dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.879"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="234dp"
         android:layout_height="97dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.094"
         app:srcCompat="@drawable/crunchyroll"
-        tools:layout_editor_absoluteX="173dp"
-        tools:layout_editor_absoluteY="0dp"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="267dp"
+        android:layout_height="344dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.276"
+        app:srcCompat="@drawable/yutapng" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

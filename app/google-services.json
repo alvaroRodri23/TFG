@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "349303838142",
-    "project_id": "examensi-a7d7f",
-    "storage_bucket": "examensi-a7d7f.appspot.com"
+    "project_number": "529249490264",
+    "project_id": "proyectologin-c9bf6",
+    "storage_bucket": "proyectologin-c9bf6.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:349303838142:android:14181fb7fc50c7742515ef",
+        "mobilesdk_app_id": "1:529249490264:android:2ebf31bf5550246716c12d",
         "android_client_info": {
           "package_name": "com.example.proyecto_si"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDhso3GLHHajNlN29ikqanemsZRjnrN1rc"
+          "current_key": "AIzaSyA9trFV5SVgeXArVqfUwZUlAKHszQAwg7w"
         }
       ],
       "services": {

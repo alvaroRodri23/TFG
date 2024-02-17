@@ -9,43 +9,63 @@
     <TextView
         android:layout_width="239dp"
         android:layout_height="80dp"
-        android:text="REGISTRO"
-        android:textColor="#FF5722"
-        android:textSize="50dp"
+        android:text="Registro"
+        android:textColor="@color/white"
+        android:textSize="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/emailregistro"
-        android:layout_width="200dp"
-        android:layout_height="78dp"
+        android:layout_width="213dp"
+        android:layout_height="86dp"
         android:background="@drawable/barra_paraescribir"
-        android:text=" EMAIL"
+        android:hint="EMAIL"
         android:textColor="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="210dp" />
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/usernameregistro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
 
     <EditText
-        android:background="@drawable/barra_paraescribir"
         android:id="@+id/usernameregistro"
-        android:layout_width="205dp"
-        android:layout_height="76dp"
-        android:text="USERNAME"
+        android:layout_width="213dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="328dp"
+        android:background="@drawable/barra_paraescribir"
+        android:hint="USERNAME"
         android:textColor="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="296dp" />
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/passwordregistro"
-        android:layout_width="203dp"
-        android:layout_height="59dp"
+        android:layout_width="213dp"
+        android:layout_height="86dp"
         android:background="@drawable/barra_paraescribir"
-        android:text="PASSWORD"
+        android:hint="PASSWORD"
         android:textColor="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="377dp" />
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameregistro"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/botonregistro"
@@ -55,16 +75,52 @@
         android:text="CONFIRMAR"
         android:textColor="@color/black"
         android:textSize="27dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="191dp"
-        tools:layout_editor_absoluteY="628dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.922"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/botonvolverlogin"
+        android:layout_width="167dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#F15F31"
+        android:text="Login"
+        android:textColor="@color/black"
+        android:textSize="27dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.898"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="272dp"
         android:layout_height="119dp"
-        app:srcCompat="@drawable/crunchyroll"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="39dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.065"
+        app:srcCompat="@drawable/crunchyroll" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="374dp"
+        android:layout_height="385dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205"
+        app:srcCompat="@drawable/gazellepng" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
