@@ -39,10 +39,6 @@ class Principal : AppCompatActivity() {
             botonPerfil.setImageResource(photoId)
         }
 
-        findViewById<Button>(R.id.botonpruebas).setOnClickListener {
-            val intent = Intent(this, perfilactivity::class.java)
-            startActivity(intent)
-        }
 
 
         seriesButton = findViewById(R.id.botonseries)

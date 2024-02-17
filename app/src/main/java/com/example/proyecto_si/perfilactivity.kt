@@ -45,9 +45,11 @@ class perfilactivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        // Inicializar FirebaseAuth
         mAuth = FirebaseAuth.getInstance()
 
-        // Initialize views
+        // Inicializar vistas
         imageViewPerfil = findViewById(R.id.imageButton3)
         recyclerViewProfileOptions = findViewById(R.id.recyclerViewProfileOptions)
         usernameTextView = findViewById(R.id.usernameperfil)
@@ -55,14 +57,24 @@ class perfilactivity : AppCompatActivity() {
         passwordEditText = findViewById(R.id.passwordperfil)
         showHidePasswordButton = findViewById(R.id.showHidePasswordButton)
 
-        // Recuperar los datos de email y contraseña de SharedPreferences
+        // Asegurar que la contraseña esté oculta al principio
+        togglePasswordVisibility()
+
+        // Recuperar los datos de nombre de usuario y contraseña del intent
+        val email = intent.getStringExtra("email")
+        val password = intent.getStringExtra("password")
+
+        // Guardar email y contraseña en SharedPreferences
         val sharedPreferences = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE)
-        val email = sharedPreferences.getString("email", "")
-        val password = sharedPreferences.getString("password", "")
+        sharedPreferences.edit().apply {
+            putString("email", email)
+            putString("password", password)
+            apply()
+        }
 
         // Mostrar los datos en los TextViews correspondientes
-        usernameTextView.text = "Email: $email"
-        passwordTextView.text = "Contraseña: $password"
+        usernameTextView.text = "Username: $email"
+        passwordTextView.text = "Password: $password"
 
         // Setup RecyclerView
         recyclerViewProfileOptions.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
@@ -76,8 +88,8 @@ class perfilactivity : AppCompatActivity() {
         recyclerViewProfileOptions.adapter = adapter
 
         // Load saved profile photo
-        val savedSharedPreferences = getSharedPreferences("Perfil", Context.MODE_PRIVATE)
-        val savedPhotoId = savedSharedPreferences.getInt("photoId", -1)
+        val sharedPreferencesPhoto = getSharedPreferences("Perfil", Context.MODE_PRIVATE)
+        val savedPhotoId = sharedPreferencesPhoto.getInt("photoId", -1)
         if (savedPhotoId != -1) {
             imageViewPerfil.setImageResource(savedPhotoId)
         }
@@ -91,13 +103,10 @@ class perfilactivity : AppCompatActivity() {
     }
 
     private fun togglePasswordVisibility() {
-        isPasswordVisible = !isPasswordVisible
         if (isPasswordVisible) {
-            // Si la contraseña debe mostrarse, establecer el texto y la transformación correspondientes
             passwordEditText.transformationMethod = null
             showHidePasswordButton.text = "Ocultar"
         } else {
-            // Si la contraseña debe ocultarse, establecer la transformación y el texto correspondientes
             passwordEditText.transformationMethod = android.text.method.PasswordTransformationMethod()
             showHidePasswordButton.text = "Mostrar"
         }
