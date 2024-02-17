@@ -17,8 +17,6 @@ class RegistroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.registro)
 
-
-
         val botonVolverLogin = findViewById<Button>(R.id.botonvolverlogin)
 
         botonVolverLogin.setOnClickListener {
@@ -26,7 +24,6 @@ class RegistroActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
 
         // Inicializar Firebase Auth
         mAuth = FirebaseAuth.getInstance()
@@ -59,18 +56,22 @@ class RegistroActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            registrarUsuario(email, password)
+            registrarUsuario(email, password, username)
         }
     }
 
-    private fun registrarUsuario(email: String, password: String) {
+    private fun registrarUsuario(email: String, password: String, username: String) {
         mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Registro exitoso
                     Toast.makeText(this, "¡Registro exitoso!", Toast.LENGTH_SHORT).show()
+                    val user = mAuth.currentUser
+                    val userEmail = user?.email
+                    val userUid = user?.uid
                     // Aquí podrías añadir más lógica después del registro exitoso
                     // Por ejemplo, redirigir al usuario a otra actividad, etc.
+                    // También puedes almacenar el username en la base de datos si es necesario
                 } else {
                     // Si el registro falla, mostrar un mensaje al usuario.
                     Toast.makeText(this, "Error al registrar, por favor, inténtelo de nuevo.", Toast.LENGTH_SHORT).show()

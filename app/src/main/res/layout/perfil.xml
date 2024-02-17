@@ -20,79 +20,56 @@
         app:layout_constraintVertical_bias="0.264" />
 
 
-    <TextView
-        android:id="@+id/emailperfil"
-        android:layout_width="262dp"
-        android:layout_height="114dp"
-        android:layout_marginTop="560dp"
-        android:background="@drawable/barra_paraescribir"
-        android:text=" EMAIL"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/usernameperfil"
         android:layout_width="262dp"
         android:layout_height="114dp"
-        android:layout_marginTop="79dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/barra_paraescribir"
-        android:text="USERNAME"
-        app:layout_constraintBottom_toTopOf="@+id/emailperfil"
+        android:text=""
+        android:textSize="20dp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerViewProfileOptions"
         app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:visibility="visible"/>
 
-    <TextView
+    <EditText
         android:id="@+id/passwordperfil"
         android:layout_width="262dp"
+        android:visibility="visible"
         android:layout_height="114dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/barra_paraescribir"
-        android:text="PASSWORD"
+        android:hint="PASSWORD"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/emailperfil"
         app:layout_constraintVertical_bias="0.298"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="108dp"
-        android:layout_height="70dp"
-        android:backgroundTint="#FF5722"
-        android:text="ATRÁS"
-        android:textColor="@color/black"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.927"
-        tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/botonprueba2"
-        android:layout_width="108dp"
-        android:layout_height="70dp"
+        android:id="@+id/botonprincipal2"
+        android:layout_width="132dp"
+        android:layout_height="73dp"
         android:backgroundTint="#FF5722"
         android:text="principal"
         android:textColor="@color/black"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintHorizontal_bias="0.942"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.668"
+        app:layout_constraintVertical_bias="0.528"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
@@ -123,6 +100,18 @@
         app:layout_constraintHorizontal_bias="0.197"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/showHidePasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostrar"
+        app:layout_constraintBottom_toBottomOf="@+id/passwordperfil"
+        app:layout_constraintEnd_toEndOf="@+id/passwordperfil"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/passwordperfil"
+        app:layout_constraintTop_toTopOf="@+id/passwordperfil"
+        app:layout_constraintVertical_bias="0.166" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
