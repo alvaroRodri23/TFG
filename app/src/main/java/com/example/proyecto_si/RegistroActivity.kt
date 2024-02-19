@@ -69,9 +69,6 @@ class RegistroActivity : AppCompatActivity() {
                     val user = mAuth.currentUser
                     val userEmail = user?.email
                     val userUid = user?.uid
-                    // Aquí podrías añadir más lógica después del registro exitoso
-                    // Por ejemplo, redirigir al usuario a otra actividad, etc.
-                    // También puedes almacenar el username en la base de datos si es necesario
                 } else {
                     // Si el registro falla, mostrar un mensaje al usuario.
                     Toast.makeText(this, "Error al registrar, por favor, inténtelo de nuevo.", Toast.LENGTH_SHORT).show()

@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                         intent.putExtra("email", email)
                         intent.putExtra("password", password)
                         startActivity(intent)
-                        finish() // Esto asegura que el usuario no pueda volver atrás presionando el botón "Atrás" del dispositivo
+                        finish() // Esto asegura que el usuario no pueda volver atrás presionando el botón Atrás del dispositivo
                     } else {
                         Log.w(TAG, "signInWithEmail:failure", task.exception)
                         Toast.makeText(baseContext, "Correo incorrecto.", Toast.LENGTH_SHORT).show()

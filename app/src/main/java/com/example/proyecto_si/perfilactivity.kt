@@ -76,7 +76,7 @@ class perfilactivity : AppCompatActivity() {
         usernameTextView.text = "Username: $email"
         passwordTextView.text = "Password: $password"
 
-        // Setup RecyclerView
+        // preparar el RecyclerView
         recyclerViewProfileOptions.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         val adapter = ProfileOptionsAdapter(photos) { photo ->
             imageViewPerfil.setImageResource(photo)
@@ -87,14 +87,14 @@ class perfilactivity : AppCompatActivity() {
         }
         recyclerViewProfileOptions.adapter = adapter
 
-        // Load saved profile photo
+        // cargar las fotos de perfil
         val sharedPreferencesPhoto = getSharedPreferences("Perfil", Context.MODE_PRIVATE)
         val savedPhotoId = sharedPreferencesPhoto.getInt("photoId", -1)
         if (savedPhotoId != -1) {
             imageViewPerfil.setImageResource(savedPhotoId)
         }
 
-        // Handle show/hide password functionality
+        // manejo de esconder la contraseña
         showHidePasswordButton.setOnClickListener {
             isPasswordVisible = !isPasswordVisible
             togglePasswordVisibility()
