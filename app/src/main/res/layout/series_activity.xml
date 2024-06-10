@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <!-- AppBar layout with toolbar -->
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Fondo o background -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="60dp" />
+
+    <!-- Navigation view with drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
+
+    <!-- Main content layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Profile button -->
+        <ImageButton
+            android:id="@+id/botonperfil"
+            android:layout_width="124dp"
+            android:layout_height="112dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@mipmap/defaulpfp"
+            tools:ignore="MissingConstraints" />
+
+        <!-- Texto "Peliculas Destacadas en la última semana" -->
+        <TextView
+            android:id="@+id/textSeriesDestacadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Series Destacadas en la última semana"
+            android:textColor="#FFFF00"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            app:layout_constraintTop_toBottomOf="@id/botonperfil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            tools:ignore="NotSibling" />
+
+        <!-- ScrollView vertical -->
+        <ScrollView
+            android:layout_width="421dp"
+            android:layout_height="644dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textSeriesDestacadas">
+
+            <!-- LinearLayout vertical -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Ejemplo de imagen y texto -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Imagen -->
+                    <ImageView
+                        android:id="@+id/imageserie1"
+                        android:layout_width="match_parent"
+                        android:layout_height="370dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/gamethrones" />
+
+                    <TextView
+                        android:id="@+id/descserie1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="GAME OF THRONES-56 MIN"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="30dp" />
+
+                    <ImageView
+                        android:id="@+id/imageserie2"
+                        android:layout_width="match_parent"
+                        android:layout_height="370dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/gotham" />
+
+                    <TextView
+                        android:id="@+id/descserie2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="GOTHAM-42 MIN"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="30dp" />
+
+                    <ImageView
+                        android:id="@+id/imageserie3"
+                        android:layout_width="match_parent"
+                        android:layout_height="370dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/narcos" />
+
+                    <TextView
+                        android:id="@+id/descserie3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="NARCOS-49 MIN"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="30dp" />
+
+                    <ImageView
+                        android:id="@+id/imageserie4"
+                        android:layout_width="match_parent"
+                        android:layout_height="370dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/breaking" />
+
+                    <TextView
+                        android:id="@+id/descserie4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BREAKING BAD-49 MIN"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="30dp" />
+
+                    <ImageView
+                        android:id="@+id/imageserie5"
+                        android:layout_width="match_parent"
+                        android:layout_height="370dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/luke" />
+
+                    <TextView
+                        android:id="@+id/descserie5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LUKE CAGE-55 MIN"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="30dp" />
+
+                    <ImageView
+                        android:id="@+id/imageserie6"
+                        android:layout_width="match_parent"
+                        android:layout_height="370dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/power" />
+
+                    <TextView
+                        android:id="@+id/descserie6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="POWER-50 MIN"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="30dp" />
+
+
+
+
+                </LinearLayout>
+
+                <!-- Agrega más imágenes y textos según sea necesario -->
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

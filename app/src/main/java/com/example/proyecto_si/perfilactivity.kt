@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 
+
 class perfilactivity : AppCompatActivity() {
 
     private lateinit var imageViewPerfil: ImageView
@@ -41,7 +42,7 @@ class perfilactivity : AppCompatActivity() {
         val botonPrincipal2 = findViewById<Button>(R.id.botonprincipal2)
 
         botonPrincipal2.setOnClickListener {
-            val intent = Intent(this, Principal::class.java)
+            val intent = Intent(this, principal2::class.java)
             startActivity(intent)
         }
 

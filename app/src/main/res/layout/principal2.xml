@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <!-- AppBar layout with toolbar -->
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Fondo o background -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="60dp" />
+
+    <!-- Navigation view with drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
+
+    <!-- Main content layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Profile button -->
+        <ImageButton
+            android:id="@+id/botonperfil"
+            android:layout_width="124dp"
+            android:layout_height="112dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@mipmap/defaulpfp"
+            tools:ignore="MissingConstraints" />
+
+        <!-- Horizontal ScrollView -->
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/botonperfil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- Example items inside the HorizontalScrollView -->
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="300dp"
+                    android:src="@drawable/avatar" />
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="300dp"
+                    android:src="@drawable/i_am_a_legend" />
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="300dp"
+                    android:src="@drawable/trescientos" />
+
+                <ImageView
+                    android:id="@+id/image4"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="300dp"
+                    android:src="@drawable/vikings" />
+
+                <ImageView
+                    android:id="@+id/image5"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="300dp"
+                    android:src="@drawable/gamethrones" />
+
+                <ImageView
+                    android:id="@+id/image6"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="300dp"
+                    android:src="@drawable/rogue" />
+
+                <ImageView
+                    android:id="@+id/image7"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="300dp"
+                    android:src="@drawable/gotham" />
+
+                <ImageView
+                    android:id="@+id/image8"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="300dp"
+                    android:src="@drawable/interestellar" />
+
+                <ImageView
+                    android:id="@+id/image9"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="300dp"
+                    android:src="@drawable/assasin" />
+
+                <ImageView
+                    android:id="@+id/image10"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="300dp"
+                    android:src="@drawable/gojo" />
+
+                <ImageView
+                    android:id="@+id/image11"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="300dp"
+                    android:src="@drawable/dbsbroly2" />
+
+                <!-- Add more items as needed -->
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Vertical ScrollView -->
+        <ScrollView
+            android:id="@+id/verticalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Texto "Selección" -->
+                <TextView
+                    android:id="@+id/textSelection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selección"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:textSize="50sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Texto "y" -->
+                <TextView
+                    android:id="@+id/textAnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DE"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:textSize="50sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Texto "Este Mes" -->
+                <TextView
+                    android:id="@+id/textThisMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Este Mes"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:textSize="50sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp" />
+                <ImageView
+                    android:id="@+id/imagev4"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/lobo"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="4dp" /> <!-- Reducido el margen inferior -->
+
+                <TextView
+                    android:id="@+id/descriptionText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Peliculas disponibles"
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp"
+                    android:padding="8dp"
+                    android:layout_marginBottom="4dp" />
+
+                <ImageView
+                    android:id="@+id/imagev5"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/animemovies"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="4dp" /> <!-- Reducido el margen inferior -->
+
+                <TextView
+                    android:id="@+id/descriptionText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Animes disponibles"
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp"
+                    android:padding="8dp"
+                    android:layout_marginBottom="4dp" />
+
+                <ImageView
+                    android:id="@+id/imagev6"
+                    android:layout_width="@dimen/image_width"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/jjks2"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="4dp" /> <!-- Reducido el margen inferior -->
+
+                <TextView
+                    android:id="@+id/descriptionText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Series disponibles"
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp"
+                    android:padding="8dp"
+                    android:layout_marginBottom="8dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

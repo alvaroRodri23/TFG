@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Define the width of the images in the HorizontalScrollView -->
+    <dimen name="image_width">300dp</dimen>
+    <dimen name="image_height">200dp</dimen>
+</resources>
