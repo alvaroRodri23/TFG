@@ -67,7 +67,10 @@
         <activity
             android:name=".principal2"
             android:exported="true">
-
+        </activity>
+        <activity
+            android:name=".infostream"
+            android:exported="true">
         </activity>
     </application>
 

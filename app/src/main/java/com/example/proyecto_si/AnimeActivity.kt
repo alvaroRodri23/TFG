@@ -3,6 +3,7 @@ package com.example.proyecto_si
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +16,18 @@ class AnimeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
+    private val trailersMap = mapOf(
+        R.id.imageAnime1 to "https://www.youtube.com/watch?v=a70_eOnIS3o&ab_channel=CrunchyrollenEspa%C3%B1ol",
+        R.id.imageAnime2 to "https://www.youtube.com/watch?v=bXgip0F6qdc&ab_channel=Crunchyroll",
+        R.id.imageAnime3 to "https://www.youtube.com/watch?v=FRn6xXXF-7s&ab_channel=CrunchyrollenEspa%C3%B1ol",
+        R.id.imageAnime4 to "https://www.youtube.com/watch?v=yQJM963be_I&ab_channel=IGN",
+        R.id.imageAnime5 to "https://www.youtube.com/watch?v=TiIZ2NZxjMI&ab_channel=CrunchyrollenEspa%C3%B1ol",
+        R.id.imageAnime6 to "https://www.youtube.com/watch?v=PrgxJ1_sUcs&ab_channel=Netflix",
+        R.id.imageAnime7 to "https://www.youtube.com/watch?v=Yl_f0sYMaGk&ab_channel=Crunchyroll",
+        R.id.imageAnime8 to "https://www.youtube.com/watch?v=mxUEUrj8Ezw&ab_channel=FandangoLatam",
+        R.id.imageAnime9 to "https://www.youtube.com/watch?v=2rPPppw6Bhk&ab_channel=CrunchyrollenEspa%C3%B1ol",
+        R.id.imageAnime10 to "https://www.youtube.com/watch?v=-AwLMRgcEoA&ab_channel=Cin%C3%A9polis"
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +47,34 @@ class AnimeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
+
+        val images = listOf(
+            R.id.imageAnime1,
+            R.id.imageAnime2,
+            R.id.imageAnime3,
+            R.id.imageAnime4,
+            R.id.imageAnime5,
+            R.id.imageAnime6,
+            R.id.imageAnime7,
+            R.id.imageAnime8,
+            R.id.imageAnime9,
+            R.id.imageAnime10
+        )
+
+        images.forEach { imageId ->
+            val imageView = findViewById<ImageView>(imageId)
+            imageView.setOnClickListener {
+               val title = getTitleForImage(imageId)
+                val imageResource = getImageResourceForImage(imageId)
+                val trailer = getTrailerForImage(imageId)
+                val intent = Intent(this, infostream::class.java).apply {
+                    putExtra("title", title)
+                   putExtra("imageResource", imageResource)
+                    putExtra("trailer", trailer)
+                }
+                startActivity(intent)
+            }
+        }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -60,5 +101,43 @@ class AnimeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
             return true
         }
         return super.onOptionsItemSelected(item)
+    }
+
+   private fun getTitleForImage(imageId: Int): String {
+        return when (imageId) {
+            R.id.imageAnime1 -> "Jujutu kaien 2"
+            R.id.imageAnime2 -> "Dr tone new world"
+            R.id.imageAnime3 -> "ataque a lo titanes"
+            R.id.imageAnime4 -> "Dragon ball super"
+            R.id.imageAnime5 -> "Black clover"
+            R.id.imageAnime6 -> "Black clover sword of the wizard king"
+            R.id.imageAnime7 -> "Jujutsu kaisen 0"
+            R.id.imageAnime8 -> "Dragon ball super broly"
+            R.id.imageAnime9 -> "Suzume"
+            R.id.imageAnime10 -> "Guardianes de la noche"
+            else -> "Título genérico"
+        }
+    }
+
+    private fun getImageResourceForImage(imageId: Int): Int {
+        return when (imageId) {
+            R.id.imageAnime1 -> R.drawable.jjks2
+            R.id.imageAnime2 -> R.drawable.drstone
+            R.id.imageAnime3 -> R.drawable.shingeki
+            R.id.imageAnime4 -> R.drawable.db
+            R.id.imageAnime5 -> R.drawable.bc
+            R.id.imageAnime6 -> R.drawable.bcfilm
+            R.id.imageAnime7 -> R.drawable.jjk0
+            R.id.imageAnime8 -> R.drawable.dbsbroly2
+            R.id.imageAnime9 -> R.drawable.suzume
+            R.id.imageAnime10 -> R.drawable.tren
+            else -> R.drawable.animes
+        }
+    }
+
+
+
+    private fun getTrailerForImage(imageId: Int): String {
+        return trailersMap[imageId] ?: "Trailer genérico"
     }
 }
