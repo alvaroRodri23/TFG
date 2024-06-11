@@ -105,13 +105,13 @@ class AnimeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
    private fun getTitleForImage(imageId: Int): String {
         return when (imageId) {
-            R.id.imageAnime1 -> "Jujutu kaien 2"
-            R.id.imageAnime2 -> "Dr tone new world"
+            R.id.imageAnime1 -> "Jujutsu Kaisen Season 2"
+            R.id.imageAnime2 -> "Dr.Stone New World"
             R.id.imageAnime3 -> "ataque a lo titanes"
-            R.id.imageAnime4 -> "Dragon ball super"
-            R.id.imageAnime5 -> "Black clover"
-            R.id.imageAnime6 -> "Black clover sword of the wizard king"
-            R.id.imageAnime7 -> "Jujutsu kaisen 0"
+            R.id.imageAnime4 -> "Dragon Ball Super"
+            R.id.imageAnime5 -> "Black Clover"
+            R.id.imageAnime6 -> "Black Clover Sword of the Wizard King"
+            R.id.imageAnime7 -> "Jujutsu Kaisen 0"
             R.id.imageAnime8 -> "Dragon ball super broly"
             R.id.imageAnime9 -> "Suzume"
             R.id.imageAnime10 -> "Guardianes de la noche"

@@ -102,13 +102,13 @@ class PelisActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
     private fun getTitleForImage(imageId: Int): String {
         return when (imageId) {
             R.id.imagepeli1 -> "Interstellar"
-            R.id.imagepeli2 -> "El Lobo de Wall Street"
+            R.id.imagepeli2 -> "The Wolf of Wall Street"
             R.id.imagepeli3 -> "Avatar"
-            R.id.imagepeli4 -> "I am a legend"
+            R.id.imagepeli4 -> "I Am Legend"
             R.id.imagepeli5 -> "300"
-            R.id.imagepeli6 -> "doctor strange"
-            R.id.imagepeli7 -> "Rogue one: a star wars story"
-            R.id.imagepeli8 -> "Assasins creed"
+            R.id.imagepeli6 -> "Doctor Strange"
+            R.id.imagepeli7 -> "Rogue One: A Star Wars Story"
+            R.id.imagepeli8 -> "Assassin's Creed"
             else -> "Título genérico"
         }
     }

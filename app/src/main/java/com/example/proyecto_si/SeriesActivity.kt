@@ -97,11 +97,11 @@ class SeriesActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
     private fun getTitleForImage(imageId: Int): String {
         return when (imageId) {
-            R.id.imageserie1 -> "Game of thrones"
+            R.id.imageserie1 -> "Game of Thrones"
             R.id.imageserie2 -> "Gotham"
             R.id.imageserie3 -> "Narcos"
-            R.id.imageserie4 -> "Breaking bad"
-            R.id.imageserie5 -> "Luke cage"
+            R.id.imageserie4 -> "Breaking Bad"
+            R.id.imageserie5 -> "Luke Cage"
             R.id.imageserie6 -> "Power"
             else -> "Título genérico"
         }
