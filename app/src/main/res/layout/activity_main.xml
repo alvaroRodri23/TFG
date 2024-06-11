@@ -5,21 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/fondo">
+    android:background="@drawable/fondopelis">
 
 
-    <TextView
-        android:layout_width="161dp"
-        android:layout_height="129dp"
-        android:text="LOGIN"
-        android:textColor="#F47047"
-        android:textSize="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_margin="16dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="161dp"
+            android:layout_height="129dp"
+            android:text="LOGIN"
+            android:textColor="@color/white"
+            android:textSize="50dp"
+            android:gravity="center"
+            android:background="@color/black"/>
+
+    </androidx.cardview.widget.CardView>
 
     <EditText
         android:id="@+id/passwordperfil"
@@ -57,7 +63,7 @@
         android:id="@+id/botonregistro"
         android:layout_width="179dp"
         android:layout_height="87dp"
-        android:backgroundTint="#F15F31"
+        android:backgroundTint="#CA8873"
         android:text="REGISTRO"
         android:textColor="@color/black"
         android:textSize="27dp"
@@ -73,7 +79,7 @@
         android:id="@+id/botonlogin"
         android:layout_width="193dp"
         android:layout_height="54dp"
-        android:backgroundTint="#F15F31"
+        android:backgroundTint="#CA8873"
         android:text="CONTINUAR"
         android:textColor="@color/black"
         android:textSize="23dp"
@@ -85,30 +91,18 @@
         app:layout_constraintVertical_bias="0.879"
         tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="234dp"
-        android:layout_height="97dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.909"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094"
-        app:srcCompat="@drawable/crunchyroll"
-        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="267dp"
-        android:layout_height="344dp"
+        android:layout_width="254dp"
+        android:layout_height="255dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintHorizontal_bias="0.394"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.276"
-        app:srcCompat="@drawable/yutapng" />
+        app:layout_constraintVertical_bias="0.271"
+        app:srcCompat="@drawable/camara2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

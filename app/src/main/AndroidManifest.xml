@@ -13,16 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto_SI"
         tools:targetApi="31">
-
-        <activity
-            android:name=".Explorer_genres"
-            android:exported="true">
-
-        </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity
@@ -51,10 +48,6 @@
         <activity
             android:name=".SeriesActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".AnimeActivity"
