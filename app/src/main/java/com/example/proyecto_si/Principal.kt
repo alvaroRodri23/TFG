@@ -202,13 +202,39 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            R.id.nav_item_one -> Toast.makeText(this,"item1",Toast.LENGTH_SHORT).show()
-            R.id.nav_item_two -> Toast.makeText(this,"item2",Toast.LENGTH_SHORT).show()
-            R.id.nav_item_three -> Toast.makeText(this,"item3",Toast.LENGTH_SHORT).show()
+        when (item.itemId) {
+            R.id.nav_item_one -> {
+                val intent = Intent(this, principal2::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_item_two -> {
+                val intent = Intent(this, AnalyticsActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_item_six -> {
+                val intent = Intent(this, PelisActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_item_seven -> {
+                val intent = Intent(this, SeriesActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_item_ocho -> {
+                val intent = Intent(this, AnimeActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_item_nueve -> {
+                // Código para cerrar sesión
+                showToast("Cerrar sesión")
+                // Lógica para cerrar sesión aquí
+            }
+            else -> showToast("Unknown item selected")
         }
         drawer.closeDrawer(GravityCompat.START)
         return true
+    }
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?){

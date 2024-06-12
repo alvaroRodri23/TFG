@@ -75,14 +75,36 @@ class PelisActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nav_item_one -> showToast("Item 1")
-            R.id.nav_item_two -> showToast("Item 2")
-            R.id.nav_item_three -> showToast("Item 3")
+            R.id.nav_item_one -> {
+                val intent = Intent(this, principal2::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_item_two -> {
+                val intent = Intent(this, AnalyticsActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_item_six -> {
+                val intent = Intent(this, PelisActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_item_seven -> {
+                val intent = Intent(this, SeriesActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_item_ocho -> {
+                val intent = Intent(this, AnimeActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_item_nueve -> {
+                // Código para cerrar sesión
+                showToast("Cerrar sesión")
+                // Lógica para cerrar sesión aquí
+            }
+            else -> showToast("Unknown item selected")
         }
         drawer.closeDrawer(GravityCompat.START)
         return true
     }
-
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }

@@ -2,29 +2,40 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group>
         <item
+            android:clickable="true"
             android:id="@+id/nav_item_one"
             android:icon="@drawable/abc_vector_test"
-            android:title="Item 1" />
+            android:title="Home" />
         <item
+            android:clickable="true"
             android:id="@+id/nav_item_two"
             android:icon="@drawable/abc_vector_test"
-            android:title="Item 2" />
-        <item
-            android:id="@+id/nav_item_three"
-            android:icon="@drawable/abc_vector_test"
-            android:title="Item 3" />
+            android:title="Analíticas" />
     </group>
 
-    <item android:title="Title 1">
+    <item android:title="Explorar">
         <menu>
+
             <item
+                android:clickable="true"
                 android:id="@+id/nav_item_six"
                 android:icon="@drawable/abc_vector_test"
-                android:title="Item 6" />
+                android:title="Peliculas" />
             <item
+                android:clickable="true"
                 android:id="@+id/nav_item_seven"
                 android:icon="@drawable/abc_vector_test"
-                android:title="Item 7" />
+                android:title="Series" />
+            <item
+                android:clickable="true"
+                android:id="@+id/nav_item_ocho"
+                android:icon="@drawable/abc_vector_test"
+                android:title="Anime" />
         </menu>
     </item>
+    <item
+        android:clickable="true"
+        android:id="@+id/nav_item_nueve"
+        android:icon="@drawable/abc_vector_test"
+        android:title="Cerrar sesión" />
 </menu>
