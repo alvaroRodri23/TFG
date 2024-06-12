@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 private lateinit var botonPerfil: ImageButton
 private lateinit var botonHome: ImageButton
 private lateinit var botonAnaliticas: ImageButton
+private lateinit var botonforo: ImageButton
 
 class AnalyticsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +17,7 @@ class AnalyticsActivity : AppCompatActivity() {
         botonPerfil = findViewById(R.id.botonperfil)
         botonHome = findViewById(R.id.botonhome)
         botonAnaliticas = findViewById(R.id.botonanaliticas)
+        botonforo = findViewById(R.id.botonforo)
 
 
         // Configurar clics de botón
@@ -31,6 +33,10 @@ class AnalyticsActivity : AppCompatActivity() {
 
         botonAnaliticas.setOnClickListener {
             val intent = Intent(this, AnalyticsActivity::class.java)
+            startActivity(intent)
+        }
+        botonforo.setOnClickListener {
+            val intent = Intent(this, CommentsActivity::class.java)
             startActivity(intent)
         }
     }

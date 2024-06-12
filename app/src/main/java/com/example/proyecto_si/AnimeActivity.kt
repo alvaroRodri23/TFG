@@ -20,6 +20,7 @@ class AnimeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
     private lateinit var botonPerfil: ImageButton
     private lateinit var botonHome: ImageButton
     private lateinit var botonAnaliticas: ImageButton
+    private lateinit var botonforo: ImageButton
     private val trailersMap = mapOf(
         R.id.imageAnime1 to "https://www.youtube.com/watch?v=a70_eOnIS3o&ab_channel=CrunchyrollenEspa%C3%B1ol",
         R.id.imageAnime2 to "https://www.youtube.com/watch?v=bXgip0F6qdc&ab_channel=Crunchyroll",
@@ -43,6 +44,8 @@ class AnimeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         botonPerfil = findViewById(R.id.botonperfil)
         botonHome = findViewById(R.id.botonhome)
         botonAnaliticas = findViewById(R.id.botonanaliticas)
+        botonforo = findViewById(R.id.botonforo)
+
 
         drawer = findViewById(R.id.drawer_layout)
         toggle = ActionBarDrawerToggle(
@@ -65,6 +68,10 @@ class AnimeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
         botonAnaliticas.setOnClickListener {
             val intent = Intent(this, AnalyticsActivity::class.java)
+            startActivity(intent)
+        }
+        botonforo.setOnClickListener {
+            val intent = Intent(this, CommentsActivity::class.java)
             startActivity(intent)
         }
 

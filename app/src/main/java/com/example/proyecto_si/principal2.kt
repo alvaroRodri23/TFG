@@ -26,6 +26,7 @@ class principal2 : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
     private lateinit var botonPerfil: ImageButton
     private lateinit var botonHome: ImageButton
     private lateinit var botonAnaliticas: ImageButton
+    private lateinit var botonforo: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +40,7 @@ class principal2 : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         botonPerfil = findViewById(R.id.botonperfil)
         botonHome = findViewById(R.id.botonhome)
         botonAnaliticas = findViewById(R.id.botonanaliticas)
-
+        botonforo = findViewById(R.id.botonforo)
 
         image4.setOnClickListener {
             val intent = Intent(this, PelisActivity::class.java)
@@ -68,6 +69,10 @@ class principal2 : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
 
         botonAnaliticas.setOnClickListener {
             val intent = Intent(this, AnalyticsActivity::class.java)
+            startActivity(intent)
+        }
+        botonforo.setOnClickListener {
+            val intent = Intent(this, CommentsActivity::class.java)
             startActivity(intent)
         }
 

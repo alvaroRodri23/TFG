@@ -20,6 +20,9 @@ class PelisActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
     private lateinit var botonPerfil: ImageButton
     private lateinit var botonHome: ImageButton
     private lateinit var botonAnaliticas: ImageButton
+    private lateinit var botonforo: ImageButton
+
+
     private val trailersMap = mapOf(
         R.id.imagepeli1 to "https://www.youtube.com/watch?v=UoSSbmD9vqc&ab_channel=WarnerBros.PicturesEspa%C3%B1a",
         R.id.imagepeli2 to "https://www.youtube.com/watch?v=DEMZSa0esCU&ab_channel=TrailersyEstrenos",
@@ -38,6 +41,7 @@ class PelisActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         botonPerfil = findViewById(R.id.botonperfil)
         botonHome = findViewById(R.id.botonhome)
         botonAnaliticas = findViewById(R.id.botonanaliticas)
+        botonforo = findViewById(R.id.botonforo)
 
         val toolbar: Toolbar = findViewById(R.id.toolbar_main)
         setSupportActionBar(toolbar)
@@ -64,6 +68,10 @@ class PelisActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
         botonAnaliticas.setOnClickListener {
             val intent = Intent(this, AnalyticsActivity::class.java)
+            startActivity(intent)
+        }
+        botonforo.setOnClickListener {
+            val intent = Intent(this, CommentsActivity::class.java)
             startActivity(intent)
         }
 

@@ -20,7 +20,7 @@ class SeriesActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
     private lateinit var botonPerfil: ImageButton
     private lateinit var botonHome: ImageButton
     private lateinit var botonAnaliticas: ImageButton
-
+    private lateinit var botonforo: ImageButton
     private val trailersMap = mapOf(
         R.id.imageserie1 to "https://www.youtube.com/watch?v=KPLWWIOCOOQ&ab_channel=GameofThrones",
         R.id.imageserie2 to "https://www.youtube.com/watch?v=VwOPA2upeCA&ab_channel=IGN",
@@ -37,7 +37,7 @@ class SeriesActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         botonPerfil = findViewById(R.id.botonperfil)
         botonHome = findViewById(R.id.botonhome)
         botonAnaliticas = findViewById(R.id.botonanaliticas)
-
+        botonforo = findViewById(R.id.botonforo)
         val toolbar: Toolbar = findViewById(R.id.toolbar_main)
         setSupportActionBar(toolbar)
 
@@ -64,7 +64,10 @@ class SeriesActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
             val intent = Intent(this, AnalyticsActivity::class.java)
             startActivity(intent)
         }
-        
+        botonforo.setOnClickListener {
+            val intent = Intent(this, CommentsActivity::class.java)
+            startActivity(intent)
+        }
         val images = listOf(
             R.id.imageserie1,
             R.id.imageserie2,
