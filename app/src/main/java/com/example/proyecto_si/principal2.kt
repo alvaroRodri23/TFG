@@ -97,7 +97,6 @@ class principal2 : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         when (item.itemId) {
             R.id.nav_item_one -> showToast("Item 1")
             R.id.nav_item_two -> showToast("Item 2")
-            R.id.nav_item_three -> showToast("Item 3")
         }
         drawer.closeDrawer(GravityCompat.START)
         return true
