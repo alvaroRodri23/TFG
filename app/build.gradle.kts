@@ -51,4 +51,5 @@ dependencies {
     implementation ("com.google.firebase:firebase-database-ktx")
     implementation ("androidx.drawerlayout:drawerlayout:1.2.0")
     implementation ("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
+
 }

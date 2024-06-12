@@ -1,4 +1,4 @@
-package com.example.proyecto_si
+/*package com.example.proyecto_si
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
@@ -258,3 +258,6 @@ class Principal : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
 
 
 
+
+
+ */

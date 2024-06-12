@@ -3,6 +3,7 @@ package com.example.proyecto_si
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -16,6 +17,9 @@ class AnimeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var botonPerfil: ImageButton
+    private lateinit var botonHome: ImageButton
+    private lateinit var botonAnaliticas: ImageButton
     private val trailersMap = mapOf(
         R.id.imageAnime1 to "https://www.youtube.com/watch?v=a70_eOnIS3o&ab_channel=CrunchyrollenEspa%C3%B1ol",
         R.id.imageAnime2 to "https://www.youtube.com/watch?v=bXgip0F6qdc&ab_channel=Crunchyroll",
@@ -36,6 +40,10 @@ class AnimeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         val toolbar: Toolbar = findViewById(R.id.toolbar_main)
         setSupportActionBar(toolbar)
 
+        botonPerfil = findViewById(R.id.botonperfil)
+        botonHome = findViewById(R.id.botonhome)
+        botonAnaliticas = findViewById(R.id.botonanaliticas)
+
         drawer = findViewById(R.id.drawer_layout)
         toggle = ActionBarDrawerToggle(
             this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
@@ -45,8 +53,20 @@ class AnimeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
 
-        val navigationView: NavigationView = findViewById(R.id.nav_view)
-        navigationView.setNavigationItemSelectedListener(this)
+        botonPerfil.setOnClickListener {
+            val intent = Intent(this, perfilactivity::class.java)
+            startActivity(intent)
+        }
+
+        botonHome.setOnClickListener {
+            val intent = Intent(this, principal2::class.java)
+            startActivity(intent)
+        }
+
+        botonAnaliticas.setOnClickListener {
+            val intent = Intent(this, AnalyticsActivity::class.java)
+            startActivity(intent)
+        }
 
         val images = listOf(
             R.id.imageAnime1,
@@ -130,7 +150,7 @@ class AnimeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         return when (imageId) {
             R.id.imageAnime1 -> "Jujutsu Kaisen Season 2"
             R.id.imageAnime2 -> "Dr.Stone New World"
-            R.id.imageAnime3 -> "ataque a lo titanes"
+            R.id.imageAnime3 -> "Attack on titan"
             R.id.imageAnime4 -> "Dragon Ball Super"
             R.id.imageAnime5 -> "Black Clover"
             R.id.imageAnime6 -> "Black Clover Sword of the Wizard King"

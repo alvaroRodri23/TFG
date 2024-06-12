@@ -3,11 +3,7 @@ package com.example.proyecto_si
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.HorizontalScrollView
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.ScrollView
@@ -21,88 +17,30 @@ import com.google.android.material.navigation.NavigationView
 
 class principal2 : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-
-
-
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
-    private lateinit var horizontalScrollView: HorizontalScrollView
-    private lateinit var botonPerfil: ImageButton
     private lateinit var verticalScrollView: ScrollView
     private lateinit var image4: ImageView
     private lateinit var image5: ImageView
     private lateinit var image6: ImageView
-    private val handler = Handler(Looper.getMainLooper())
-    private val imageViews: List<ImageView> by lazy {
-        listOf(
-            findViewById(R.id.image1),
-            findViewById(R.id.image2),
-            findViewById(R.id.image3),
-            findViewById(R.id.image4),
-            findViewById(R.id.image5),
-            findViewById(R.id.image6),
-            findViewById(R.id.image7),
-            findViewById(R.id.image8),
-            findViewById(R.id.image9)
-        )
-    }
-    private var currentIndex = 0
+    private lateinit var botonPerfil: ImageButton
+    private lateinit var botonHome: ImageButton
+    private lateinit var botonAnaliticas: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.principal2)
-
-        val navigationView: NavigationView = findViewById(R.id.nav_view)
-        navigationView.setNavigationItemSelectedListener(this)
-
-        // Encuentra los botones por su ID
-        val button1 = findViewById<Button>(R.id.button1)
-        val button2 = findViewById<Button>(R.id.button2)
-        val button3 = findViewById<Button>(R.id.button3)
-        val button4 = findViewById<Button>(R.id.button4)
-        val button5 = findViewById<Button>(R.id.button5)
-        val button6 = findViewById<Button>(R.id.button6)
-
-        // Asigna un OnClickListener a cada botón
-        button1.setOnClickListener {
-            val intent = Intent(this, principal2::class.java)
-            startActivity(intent)
-        }
-
-        button2.setOnClickListener {
-            val intent = Intent(this, AnalyticsActivity::class.java)
-            startActivity(intent)
-        }
-
-        button3.setOnClickListener {
-            val intent = Intent(this, PelisActivity::class.java)
-            startActivity(intent)
-        }
-
-        button4.setOnClickListener {
-            val intent = Intent(this, SeriesActivity::class.java)
-            startActivity(intent)
-        }
-
-        button5.setOnClickListener {
-            val intent = Intent(this, AnimeActivity::class.java)
-            startActivity(intent)
-        }
-
-        button6.setOnClickListener {
-            val intent = Intent(this, perfilactivity::class.java)
-            startActivity(intent)
-        }
-
-
 
         val toolbar: Toolbar = findViewById(R.id.toolbar_main)
         setSupportActionBar(toolbar)
         image4 = findViewById(R.id.imagev4)
         image5 = findViewById(R.id.imagev5)
         image6 = findViewById(R.id.imagev6)
+        botonPerfil = findViewById(R.id.botonperfil)
+        botonHome = findViewById(R.id.botonhome)
+        botonAnaliticas = findViewById(R.id.botonanaliticas)
 
-        // Configuración de los listeners de los ImageView
+
         image4.setOnClickListener {
             val intent = Intent(this, PelisActivity::class.java)
             startActivity(intent)
@@ -118,11 +56,30 @@ class principal2 : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
             startActivity(intent)
         }
 
-        // Configuración del drawer y toggle
+        botonPerfil.setOnClickListener {
+            val intent = Intent(this, perfilactivity::class.java)
+            startActivity(intent)
+        }
+
+        botonHome.setOnClickListener {
+            val intent = Intent(this, principal2::class.java)
+            startActivity(intent)
+        }
+
+        botonAnaliticas.setOnClickListener {
+            val intent = Intent(this, AnalyticsActivity::class.java)
+            startActivity(intent)
+        }
+
+
         drawer = findViewById(R.id.drawer_layout)
-        horizontalScrollView = findViewById(R.id.horizontalScrollView)
         botonPerfil = findViewById(R.id.botonperfil)
+        botonHome = findViewById(R.id.botonhome)
+        botonAnaliticas = findViewById(R.id.botonanaliticas)
         verticalScrollView = findViewById(R.id.verticalScrollView)
+        image4 = findViewById(R.id.imagev4)
+        image5 = findViewById(R.id.imagev5)
+        image6 = findViewById(R.id.imagev6)
 
         toggle = ActionBarDrawerToggle(
             this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
@@ -133,53 +90,14 @@ class principal2 : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         supportActionBar?.setHomeButtonEnabled(true)
 
 
-
-        startAutoScroll()
     }
 
-    private fun startAutoScroll() {
-        handler.postDelayed(object : Runnable {
-            override fun run() {
-                val displayMetrics = resources.displayMetrics
-                val imageWidth = displayMetrics.widthPixels
-                currentIndex = (currentIndex + 1) % imageViews.size
-                val scrollX = currentIndex * imageWidth
-                horizontalScrollView.smoothScrollTo(scrollX, 0)
-                handler.postDelayed(this, 5000) // Repite cada 5 segundos
-            }
-        }, 5000)
-    }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-
-
         when (item.itemId) {
-            R.id.nav_item_one-> {
-                val intent = Intent(this, principal2::class.java)
-                startActivity(intent)
-            }
-            R.id.nav_item_two -> {
-                val intent = Intent(this, AnalyticsActivity::class.java)
-                startActivity(intent)
-            }
-            R.id.nav_item_six -> {
-                val intent = Intent(this, PelisActivity::class.java)
-                startActivity(intent)
-            }
-            R.id.nav_item_seven -> {
-                val intent = Intent(this, SeriesActivity::class.java)
-                startActivity(intent)
-            }
-            R.id.nav_item_ocho -> {
-                val intent = Intent(this, AnimeActivity::class.java)
-                startActivity(intent)
-            }
-            R.id.nav_item_nueve -> {
-                // Código para cerrar sesión
-                showToast("Cerrar sesión")
-                // Lógica para cerrar sesión aquí
-            }
-            else -> showToast("Unknown item selected")
+            R.id.nav_item_one -> showToast("Item 1")
+            R.id.nav_item_two -> showToast("Item 2")
+            R.id.nav_item_three -> showToast("Item 3")
         }
         drawer.closeDrawer(GravityCompat.START)
         return true

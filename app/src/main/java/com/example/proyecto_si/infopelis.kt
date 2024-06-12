@@ -1,4 +1,4 @@
-package com.example.proyecto_si
+/*package com.example.proyecto_si
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
@@ -47,3 +47,6 @@ class infopelis : AppCompatActivity() {
         }
     }
 }
+
+
+ */

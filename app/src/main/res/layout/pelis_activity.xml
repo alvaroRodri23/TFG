@@ -17,18 +17,10 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/fondo"
+        android:src="@drawable/fondopelis"
         android:scaleType="centerCrop"
         android:layout_marginTop="60dp" />
 
-    <!-- Navigation view with drawer -->
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
 
     <!-- Main content layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,15 +30,35 @@
         <!-- Profile button -->
         <ImageButton
             android:id="@+id/botonperfil"
-            android:layout_width="124dp"
-            android:layout_height="112dp"
+            android:layout_width="61dp"
+            android:layout_height="58dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginTop="5dp"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
-            android:background="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@mipmap/defaulpfp"
+            app:srcCompat="@drawable/logout"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/botonhome"
+            android:layout_width="61dp"
+            android:layout_height="58dp"
+            android:layout_marginEnd="140dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/home"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/botonanaliticas"
+            android:layout_width="61dp"
+            android:layout_height="58dp"
+            android:layout_marginEnd="80dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/dashboard"
             tools:ignore="MissingConstraints" />
 
         <!-- Texto "Peliculas Destacadas en la última semana" -->

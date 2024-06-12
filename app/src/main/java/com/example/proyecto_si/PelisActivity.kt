@@ -3,6 +3,7 @@ package com.example.proyecto_si
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -16,6 +17,9 @@ class PelisActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
 
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var botonPerfil: ImageButton
+    private lateinit var botonHome: ImageButton
+    private lateinit var botonAnaliticas: ImageButton
     private val trailersMap = mapOf(
         R.id.imagepeli1 to "https://www.youtube.com/watch?v=UoSSbmD9vqc&ab_channel=WarnerBros.PicturesEspa%C3%B1a",
         R.id.imagepeli2 to "https://www.youtube.com/watch?v=DEMZSa0esCU&ab_channel=TrailersyEstrenos",
@@ -31,6 +35,10 @@ class PelisActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pelis_activity)
 
+        botonPerfil = findViewById(R.id.botonperfil)
+        botonHome = findViewById(R.id.botonhome)
+        botonAnaliticas = findViewById(R.id.botonanaliticas)
+
         val toolbar: Toolbar = findViewById(R.id.toolbar_main)
         setSupportActionBar(toolbar)
 
@@ -43,8 +51,21 @@ class PelisActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
 
-        val navigationView: NavigationView = findViewById(R.id.nav_view)
-        navigationView.setNavigationItemSelectedListener(this)
+
+        botonPerfil.setOnClickListener {
+            val intent = Intent(this, perfilactivity::class.java)
+            startActivity(intent)
+        }
+
+        botonHome.setOnClickListener {
+            val intent = Intent(this, principal2::class.java)
+            startActivity(intent)
+        }
+
+        botonAnaliticas.setOnClickListener {
+            val intent = Intent(this, AnalyticsActivity::class.java)
+            startActivity(intent)
+        }
 
         val images = listOf(
             R.id.imagepeli1,
