@@ -16,15 +16,6 @@
         android:layout_margin="16dp"
         tools:ignore="MissingConstraints">
 
-        <TextView
-            android:layout_width="161dp"
-            android:layout_height="129dp"
-            android:text="LOGIN"
-            android:textColor="@color/white"
-            android:textSize="50dp"
-            android:gravity="center"
-            android:background="@color/black"/>
-
     </androidx.cardview.widget.CardView>
 
     <EditText
@@ -63,7 +54,7 @@
         android:id="@+id/botonregistro"
         android:layout_width="179dp"
         android:layout_height="87dp"
-        android:backgroundTint="#CA8873"
+        android:backgroundTint="#CA410B"
         android:text="REGISTRO"
         android:textColor="@color/black"
         android:textSize="27dp"
@@ -79,7 +70,7 @@
         android:id="@+id/botonlogin"
         android:layout_width="193dp"
         android:layout_height="54dp"
-        android:backgroundTint="#CA8873"
+        android:backgroundTint="#CA410B"
         android:text="CONTINUAR"
         android:textColor="@color/black"
         android:textSize="23dp"
@@ -92,17 +83,16 @@
         tools:ignore="MissingConstraints" />
 
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="254dp"
-        android:layout_height="255dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.394"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.271"
-        />
+    <TextView
+        android:layout_width="391dp"
+        android:layout_height="221dp"
+        android:gravity="center"
+        android:text="BIENVENIDO"
+        android:textColor="@color/white"
+        android:textSize="60dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="16dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

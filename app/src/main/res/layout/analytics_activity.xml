@@ -21,57 +21,133 @@
         android:scaleType="centerCrop"
         android:layout_marginTop="60dp" />
 
-
-    <!-- Main content layout -->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!-- Main content layout with NestedScrollView for scrolling -->
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Profile button -->
-        <ImageButton
-            android:id="@+id/botonperfil"
-            android:layout_width="61dp"
-            android:layout_height="58dp"
-            android:layout_marginEnd="20dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/logout"
-            tools:ignore="MissingConstraints" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <ImageButton
-            android:id="@+id/botonhome"
-            android:layout_width="61dp"
-            android:layout_height="58dp"
-            android:layout_marginEnd="140dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/home"
-            tools:ignore="MissingConstraints" />
+            <!-- Profile button -->
+            <ImageButton
+                android:id="@+id/botonperfil"
+                android:layout_width="61dp"
+                android:layout_height="58dp"
+                android:layout_marginEnd="20dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/logout"
+                tools:ignore="MissingConstraints" />
 
-        <ImageButton
-            android:id="@+id/botonanaliticas"
-            android:layout_width="61dp"
-            android:layout_height="58dp"
-            android:layout_marginEnd="80dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/dashboard"
-            tools:ignore="MissingConstraints" />
-        <ImageButton
-            android:id="@+id/botonforo"
-            android:layout_width="61dp"
-            android:layout_height="58dp"
-            android:layout_marginEnd="200dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/foro"
-            tools:ignore="MissingConstraints" />
+            <ImageButton
+                android:id="@+id/botonhome"
+                android:layout_width="61dp"
+                android:layout_height="58dp"
+                android:layout_marginEnd="140dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/home"
+                tools:ignore="MissingConstraints" />
 
-      
+            <ImageButton
+                android:id="@+id/botonanaliticas"
+                android:layout_width="61dp"
+                android:layout_height="58dp"
+                android:layout_marginEnd="80dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/dashboard"
+                tools:ignore="MissingConstraints" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageButton
+                android:id="@+id/botonforo"
+                android:layout_width="61dp"
+                android:layout_height="58dp"
+                android:layout_marginEnd="200dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/foro"
+                tools:ignore="MissingConstraints" />
+
+            <!-- First ImageView -->
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/firebasecap"
+                app:layout_constraintTop_toBottomOf="@id/botonforo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp" />
+
+            <!-- First TextView: Resumen de actividad de la app -->
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resumen de actividad de la app"
+                android:textColor="@android:color/white"
+                android:textSize="58sp"
+                app:layout_constraintTop_toBottomOf="@id/imageView1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp" />
+
+            <!-- Second ImageView -->
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/firebasecap2"
+                app:layout_constraintTop_toBottomOf="@id/textView1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp" />
+
+            <!-- Second TextView: Tiempo de interacción medio -->
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tiempo de interacción medio"
+                android:textColor="@android:color/white"
+                android:textSize="58sp"
+                app:layout_constraintTop_toBottomOf="@id/imageView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp" />
+
+            <!-- Third ImageView -->
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/firebasecap3"
+                app:layout_constraintTop_toBottomOf="@id/textView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp" />
+
+            <!-- Third TextView: Número de veces que se ha abierto la app -->
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Número de veces que se ha abierto la app"
+                android:textColor="@android:color/white"
+                android:textSize="58sp"
+                app:layout_constraintTop_toBottomOf="@id/imageView3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.drawerlayout.widget.DrawerLayout>

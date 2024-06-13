@@ -1,9 +1,11 @@
 package com.example.proyecto_si
 
 import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -30,11 +32,21 @@ class infostream : AppCompatActivity() {
     private lateinit var actorsTextView: TextView
     private lateinit var yearTextView: TextView
     private lateinit var releasedTextView: TextView
+    private lateinit var botonPerfil: ImageButton
+    private lateinit var botonHome: ImageButton
+    private lateinit var botonAnaliticas: ImageButton
+    private lateinit var botonforo: ImageButton
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_infostream)
 
+
+        botonPerfil = findViewById(R.id.botonperfil)
+        botonHome = findViewById(R.id.botonhome)
+        botonAnaliticas = findViewById(R.id.botonanaliticas)
+        botonforo = findViewById(R.id.botonforo)
 
 
         // Inicializar Firebase
@@ -48,6 +60,29 @@ class infostream : AppCompatActivity() {
         actorsTextView = findViewById(R.id.actorsTextView)
         yearTextView = findViewById(R.id.yearTextView)
         releasedTextView = findViewById(R.id.releasedTextView)
+
+
+        botonPerfil.setOnClickListener {
+            val intent = Intent(this, perfilactivity::class.java)
+            startActivity(intent)
+        }
+
+        botonHome.setOnClickListener {
+            val intent = Intent(this, principal2::class.java)
+            startActivity(intent)
+        }
+
+        botonAnaliticas.setOnClickListener {
+            val intent = Intent(this, AnalyticsActivity::class.java)
+            startActivity(intent)
+        }
+        botonforo.setOnClickListener {
+            val intent = Intent(this, CommentsActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
 
         // Obtener los extras del Intent
         val title = intent.getStringExtra("title")

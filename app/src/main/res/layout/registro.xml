@@ -7,11 +7,11 @@
     android:background="@drawable/fondopelis">
 
     <TextView
-        android:layout_width="239dp"
-        android:layout_height="80dp"
+        android:layout_width="326dp"
+        android:layout_height="138dp"
         android:text="Registro"
         android:textColor="@color/white"
-        android:textSize="55dp"
+        android:textSize="65dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.18"
@@ -71,7 +71,7 @@
         android:id="@+id/botonregistro"
         android:layout_width="204dp"
         android:layout_height="88dp"
-        android:backgroundTint="#F15F31"
+        android:backgroundTint="#CA410B"
         android:text="CONFIRMAR"
         android:textColor="@color/black"
         android:textSize="27dp"
@@ -87,7 +87,7 @@
         android:id="@+id/botonvolverlogin"
         android:layout_width="167dp"
         android:layout_height="64dp"
-        android:backgroundTint="#F15F31"
+        android:backgroundTint="#CA410B"
         android:text="Login"
         android:textColor="@color/black"
         android:textSize="27dp"
