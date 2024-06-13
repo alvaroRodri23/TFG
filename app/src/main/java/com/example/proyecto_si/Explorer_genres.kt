@@ -28,7 +28,7 @@ class Explorer_genres : AppCompatActivity() {
 
         mostrarTodosLosTitulos()
 
-        // Configurar ListView de géneros
+
         val generos = arrayOf("Action", "Comedy", "Fantasy", "Drama", "Thriller", "Sci-Fi")
         val generosAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, generos)
         listViewGeneros.adapter = generosAdapter
@@ -58,7 +58,7 @@ class Explorer_genres : AppCompatActivity() {
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
-                // Manejar errores de consulta si es necesario
+
             }
         })
     }
@@ -76,7 +76,7 @@ class Explorer_genres : AppCompatActivity() {
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
-                // Manejar errores de consulta si es necesario
+
             }
         })
     }

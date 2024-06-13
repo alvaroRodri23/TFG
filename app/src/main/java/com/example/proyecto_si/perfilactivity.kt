@@ -47,10 +47,10 @@ class perfilactivity : AppCompatActivity() {
         }
 
 
-        // Inicializar FirebaseAuth
+
         mAuth = FirebaseAuth.getInstance()
 
-        // Inicializar vistas
+
         imageViewPerfil = findViewById(R.id.imageButton3)
         recyclerViewProfileOptions = findViewById(R.id.recyclerViewProfileOptions)
         usernameTextView = findViewById(R.id.usernameperfil)
@@ -58,14 +58,14 @@ class perfilactivity : AppCompatActivity() {
         passwordEditText = findViewById(R.id.passwordperfil)
         showHidePasswordButton = findViewById(R.id.showHidePasswordButton)
 
-        // Asegurar que la contraseña esté oculta al principio
+
         togglePasswordVisibility()
 
-        // Recuperar los datos de nombre de usuario y contraseña del intent
+
         val email = intent.getStringExtra("email")
         val password = intent.getStringExtra("password")
 
-        // Guardar email y contraseña en SharedPreferences
+
         val sharedPreferences = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE)
         sharedPreferences.edit().apply {
             putString("email", email)
@@ -73,11 +73,11 @@ class perfilactivity : AppCompatActivity() {
             apply()
         }
 
-        // Mostrar los datos en los TextViews correspondientes
+
         usernameTextView.text = "Username: $email"
         passwordTextView.text = "Password: $password"
 
-        // preparar el RecyclerView
+
         recyclerViewProfileOptions.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         val adapter = ProfileOptionsAdapter(photos) { photo ->
             imageViewPerfil.setImageResource(photo)
@@ -88,14 +88,13 @@ class perfilactivity : AppCompatActivity() {
         }
         recyclerViewProfileOptions.adapter = adapter
 
-        // cargar las fotos de perfil
+
         val sharedPreferencesPhoto = getSharedPreferences("Perfil", Context.MODE_PRIVATE)
         val savedPhotoId = sharedPreferencesPhoto.getInt("photoId", -1)
         if (savedPhotoId != -1) {
             imageViewPerfil.setImageResource(savedPhotoId)
         }
 
-        // manejo de esconder la contraseña
         showHidePasswordButton.setOnClickListener {
             isPasswordVisible = !isPasswordVisible
             togglePasswordVisibility()

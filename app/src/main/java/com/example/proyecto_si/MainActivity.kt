@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        // Guardar email y contraseña en SharedPreferences
+
                         val sharedPreferences = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE)
                         sharedPreferences.edit().apply {
                             putString("email", email)
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                             apply()
                         }
 
-                        // Redirigir a la actividad perfilactivity
+
                         val intent = Intent(this, perfilactivity::class.java)
                         intent.putExtra("email", email)
                         intent.putExtra("password", password)

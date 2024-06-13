@@ -7,13 +7,13 @@
     android:layout_height="match_parent"
     tools:openDrawer="start">
 
-    <!-- AppBar layout with toolbar -->
+
     <include
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <!-- Fondo o background -->
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,12 +22,12 @@
         android:src="@drawable/fondopelis"/>
 
 
-    <!-- Main content layout -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Profile button -->
+
         <ImageButton
             android:id="@+id/botonperfil"
             android:layout_width="61dp"
@@ -71,7 +71,7 @@
             app:srcCompat="@drawable/foro"
             tools:ignore="MissingConstraints" />
 
-        <!-- Texto "Peliculas Destacadas en la última semana" -->
+
         <TextView
             android:id="@+id/textAnimeDestacadas"
             android:layout_width="wrap_content"
@@ -87,7 +87,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             tools:ignore="NotSibling" />
 
-        <!-- ScrollView vertical -->
+
         <ScrollView
             android:layout_width="421dp"
             android:layout_height="644dp"
@@ -96,19 +96,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textAnimeDestacadas">
 
-            <!-- LinearLayout vertical -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- Ejemplo de imagen y texto -->
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <!-- Imagen -->
+
                     <ImageView
                         android:id="@+id/imageAnime1"
                         android:layout_width="match_parent"
@@ -273,7 +273,6 @@
 
                 </LinearLayout>
 
-                <!-- Agrega más imágenes y textos según sea necesario -->
 
             </LinearLayout>
         </ScrollView>

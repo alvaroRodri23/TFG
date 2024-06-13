@@ -7,13 +7,13 @@
     android:layout_height="match_parent"
     tools:openDrawer="start">
 
-    <!-- AppBar layout with toolbar -->
+
     <include
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <!-- Fondo o background -->
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,12 +22,11 @@
         android:layout_marginTop="60dp" />
 
 
-    <!-- Main content layout -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Profile button -->
         <ImageButton
             android:id="@+id/botonperfil"
             android:layout_width="61dp"
@@ -100,7 +99,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- CardView for Genre -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/genreCardView"
             android:layout_width="0dp"
@@ -141,7 +140,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- CardView for Director -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/directorCardView"
             android:layout_width="0dp"
@@ -180,7 +179,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- CardView for Plot -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/plotCardView"
             android:layout_width="0dp"
@@ -221,7 +220,6 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- CardView for Actors -->
         <androidx.cardview.widget.CardView
             android:id="@+id/actorsCardView"
             android:layout_width="0dp"
@@ -260,7 +258,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- CardView for Year -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/yearCardView"
             android:layout_width="0dp"
@@ -299,7 +297,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- CardView for Released -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/releasedCardView"
             android:layout_width="0dp"

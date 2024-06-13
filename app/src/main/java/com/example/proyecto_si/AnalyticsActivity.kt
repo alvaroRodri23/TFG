@@ -20,7 +20,7 @@ class AnalyticsActivity : AppCompatActivity() {
         botonforo = findViewById(R.id.botonforo)
 
 
-        // Configurar clics de botón
+
         botonPerfil.setOnClickListener {
             val intent = Intent(this, perfilactivity::class.java)
             startActivity(intent)

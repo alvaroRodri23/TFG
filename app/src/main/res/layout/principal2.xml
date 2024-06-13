@@ -7,13 +7,13 @@
     android:layout_height="match_parent"
     tools:openDrawer="start">
 
-    <!-- AppBar layout with toolbar -->
+
     <include
         layout="@layout/app_bar_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <!-- Fondo o background -->
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,12 +21,12 @@
         android:scaleType="centerCrop"
         android:layout_marginTop="60dp" />
 
-    <!-- Main content layout -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Profile button -->
+
         <ImageButton
             android:id="@+id/botonperfil"
             android:layout_width="61dp"

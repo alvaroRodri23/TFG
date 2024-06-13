@@ -127,9 +127,9 @@ class AnimeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
                 startActivity(intent)
             }
             R.id.nav_item_nueve -> {
-                // Código para cerrar sesión
+
                 showToast("Cerrar sesión")
-                // Lógica para cerrar sesión aquí
+
             }
             else -> showToast("Unknown item selected")
         }

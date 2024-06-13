@@ -123,7 +123,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="16dp" />
 
-            <!-- Third ImageView -->
+
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
@@ -134,7 +134,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="16dp" />
 
-            <!-- Third TextView: Número de veces que se ha abierto la app -->
+
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"

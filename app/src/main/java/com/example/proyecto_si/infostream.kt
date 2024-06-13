@@ -49,11 +49,11 @@ class infostream : AppCompatActivity() {
         botonforo = findViewById(R.id.botonforo)
 
 
-        // Inicializar Firebase
+
         database = FirebaseDatabase.getInstance("https://proyectologin-c9bf6-default-rtdb.firebaseio.com/")
         rootRef = database.reference
 
-        // Inicializar vistas
+
         genreTextView = findViewById(R.id.genreTextView)
         directorTextView = findViewById(R.id.directorTextView)
         plotTextView = findViewById(R.id.plotTextView)
@@ -84,24 +84,22 @@ class infostream : AppCompatActivity() {
 
 
 
-        // Obtener los extras del Intent
+
         val title = intent.getStringExtra("title")
         val imageResource = intent.getIntExtra("imageResource", -1)
         val trailer = intent.getStringExtra("trailer")
 
-        // Obtener las vistas
+
         val titleTextView: TextView = findViewById(R.id.titleTextView)
         val imageView: ImageView = findViewById(R.id.imageView)
-     //   val trailerTextView: TextView = findViewById(R.id.trailerTextView)
 
-        // Asignar los valores a las vistas
+
+
         titleTextView.text = title
         if (imageResource != -1) {
             imageView.setImageResource(imageResource)
         }
-      //  trailerTextView.text = trailer ?: "No trailer available"
 
-        // Obtener la información de Firebase
         if (title != null) {
             getMovieInfoFromFirebase(title)
             getAnimeInfoFromFirebase(title)

@@ -99,7 +99,7 @@ class CommentsActivity : AppCompatActivity() {
         }
     }
     private fun getUsernameFromEmail(email: String): String {
-        // Split the email address using "@" as delimiter and get the first part
+
         val parts = email.split("@")
         return parts[0]
     }
@@ -118,7 +118,6 @@ class CommentsActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                // Handle database error
             }
         })
     }
